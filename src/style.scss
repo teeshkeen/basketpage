@@ -1,0 +1,14 @@
+@use './styles/reset';
+@use './styles/global';
+@use './styles/header/header';
+@use './styles/banner/banner';
+@use './styles/banner/swiper';
+@use './styles/practice/practice';
+@use './styles/education/education';
+@use './styles/footer/footer.scss';
+@use './styles/menu/menu';
+
+@font-face {
+    font-family: 'Druk';
+    src: url('./fonts/Druk/DrukWideCyr-Bold.woff2') format('woff2');
+}

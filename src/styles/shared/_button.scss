@@ -1,0 +1,23 @@
+@import '../mixins';
+@import '../variables';
+
+.button {
+    @include button;
+    transition: all .3s ease-in;
+    &-active {
+        color: $white-color;
+        background-color: $primary-orange;
+    }
+
+    &-reversed {
+        color: $white-color;
+        background-color: $primary-orange;
+        max-width: -webkit-fill-available;;
+
+
+        &:hover {
+            color: $black-color;
+            background-color: $white-color;
+        }
+    }
+}

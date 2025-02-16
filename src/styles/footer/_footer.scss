@@ -1,0 +1,140 @@
+@import '../variables';
+@import '../mixins';
+
+.footer {
+    position: relative;
+    width: 100%;
+    &__inner {
+        margin-top: 42px;
+        color: $black-color;
+    }
+
+    &__content {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+
+        @include media(tablet) {
+            max-width: 500px;
+        }
+        @include media(desktop) {
+            font-size: 48px;
+            max-width: 1000px;
+        }
+    }
+
+    &__socials-list {
+        margin-top: 20px;
+        @include flex-col;
+        gap: 24px;
+        align-items: flex-start;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            &-icon {
+                width: 30px;
+                height: 30px;
+            }
+            
+            &-text {
+                font-family: 'Inter', sans-serif;
+                @include flex-col;
+                align-items: start;
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                strong {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        @include media(desktop) {
+            flex-direction: row;
+            gap: 36px;
+        }
+    }
+}
+
+.copyright {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-top: 165px;
+
+    @include media(desktop) {
+        font-size: 12px;
+        margin-top: 305px;
+    }
+}
+
+.ball {
+    position: absolute;
+    bottom: -20px;
+    right: -300px;
+    height: 320px;
+    filter: brightness(2);
+
+    @include media(tablet) {
+        bottom: -300px;
+        right: -500px;
+        height: 600px;
+    }
+
+    @include media(large-desktop) {
+        bottom: -550px;
+        right: -930px;
+        height: 1200px;
+    }
+}
+
+.qr {
+    background-color: $white-color;
+    border-radius: 30px;
+    @include flex-col;
+    justify-content: space-between;
+    padding: 44px;
+    text-align: center;
+    align-items: center;
+    display: none;
+    position: absolute;
+    max-width: 350px;
+    max-height: 400px;
+    gap: 36px;
+
+    &__typography {
+        @include flex-col;
+        gap: 12px;
+        font-size: 14;
+        width: 300px;
+
+        &-platforms {
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            color: $grey-color;
+        }
+
+        &-text {
+            text-transform: uppercase;
+        }
+    }
+
+    @include media(desktop) {
+        display: flex;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    @include media(large-desktop) {
+        bottom: 0px;
+        right: 300px;
+    }
+}

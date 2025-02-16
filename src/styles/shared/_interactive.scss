@@ -1,0 +1,58 @@
+@import '../mixins';
+@import '../variables';
+
+.arrow {
+    width: 18px;
+    height: 18px;
+}
+
+
+
+.tag {
+    cursor: pointer;
+    display: flex;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    @include border-radius;
+    background: rgba(255, 255, 255, 0.2);
+    width: max-content;
+    text-transform: uppercase;
+    transition: all .2s ease-out;
+
+    &:hover, &-active {
+        color: $primary-green;
+        background-color: $white-color;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+
+        @include media(large-desktop) {
+            max-width: 50%;
+        }
+
+        &--secondary {
+            flex-wrap: nowrap;
+            @include media(large-desktop) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &--secondary {
+        background-color: $background-color;
+        color: black;
+        &:hover {
+            background-color: $black-color;
+            color: white;
+        }
+    }
+
+    @include media(large-desktop) {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}

@@ -1,0 +1,63 @@
+@import 'variables';
+
+@mixin media($breakpoint) {
+      @if $breakpoint == mobile-l { // не придумал я как норм зареспонсивить карточки без этого медиа-запроса
+      @media (min-width: 480px) {
+        @content;
+      }
+    } @else if $breakpoint == tablet {
+      @media (min-width: 768px) {
+        @content;
+      }
+    } @else if $breakpoint == desktop {
+      @media (min-width: 1024px) {
+        @content;
+      }
+    } @else if $breakpoint == large-desktop {
+      @media (min-width: 1280px) {
+        @content;
+      }
+    }
+  }
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin border-radius {
+    border-radius: 20px;
+}
+
+@mixin button() {
+    @include flex-between;
+    color: $black-color;
+    background-color: $white-color;
+    padding: 10px 14px;
+    font-size: 14px;
+    align-items: center;
+    border-radius: 10px;
+
+    @include media(tablet) {
+      width: 100%;
+    }
+
+    @include media(large-desktop) {
+      font-size: 16px;
+      padding: 20px 22px;
+    }
+
+    &:hover {
+        color: $white-color;
+        background-color: $primary-orange;
+    }
+}
+
+@mixin section-spacer() {
+  margin-top: 22px;
+}
+
+@mixin flex-col() {
+  display: flex;
+  flex-direction: column;
+}

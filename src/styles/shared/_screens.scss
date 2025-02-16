@@ -1,0 +1,29 @@
+
+@import '../mixins';
+
+.mobile {
+    @include media(tablet) {
+        display: none;
+    }
+}
+
+.tablet {
+    display: none;
+    @include media(tablet) {
+        display: block;
+    }
+}
+
+.desktop {
+    display: none;
+    @include media(desktop) {
+        display: flex;
+    }
+}
+
+.large-desktop {
+    display: none;
+    @include media(desktop-l) {
+        display: block;
+    }
+}

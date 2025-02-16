@@ -1,0 +1,19 @@
+/* resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, ul, li, a {
+    all: unset;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+h1 {
+    text-transform: uppercase;
+}

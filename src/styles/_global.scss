@@ -1,0 +1,232 @@
+@import './variables';
+@import './mixins';
+
+
+/* global styles */
+
+body {
+    background-color: $background-color;
+    font-family: 'Druk', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.container {
+    padding: 12px 12px 25px;
+    margin: 0 auto;
+    color: $white-color;
+    overflow: hidden;
+
+    @include media(tablet) {
+        padding: 16px 16px 30px;
+    }
+
+    @include media(large-desktop) {
+        padding: 20px 20px 40px;
+    }
+}
+
+.tablet {
+    display: none;
+
+    @include media(tablet) {
+        display: block;
+    }
+}
+
+.button {
+    @include button;
+    transition: all .3s ease-in;
+    &-active {
+        color: $white-color;
+        background-color: $primary-orange;
+    }
+
+    &-reversed {
+        color: $white-color;
+        background-color: $primary-orange;
+        max-width: -webkit-fill-available;;
+
+
+        &:hover {
+            color: $black-color;
+            background-color: $white-color;
+        }
+    }
+}
+
+.arrow {
+    width: 18px;
+    height: 18px;
+}
+
+.section-header {
+    @include flex-between;
+    align-items: baseline;
+    margin-top: 42px;
+
+    &__title {
+        color: $black-color;
+        font-size: 26px;
+        text-transform: uppercase;
+
+        @include media(large-desktop) {
+            font-size: 80px;
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+
+        &--green {
+            color: $primary-green;
+        }
+        &--orange {
+            color: $primary-orange;
+        }
+
+        @include media(large-desktop) {
+            font-size: 20px;
+            gap: 12px;
+        }
+    }
+    @include media(large-desktop) {
+        margin-top: 120px;
+    }
+    &--no-space {
+        padding: 0;
+        margin: 0;
+    }
+
+
+}
+
+.tag {
+    cursor: pointer;
+    display: flex;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    @include border-radius;
+    background: rgba(255, 255, 255, 0.2);
+    width: max-content;
+    text-transform: uppercase;
+    transition: all .2s ease-out;
+
+    &:hover, &-active {
+        color: $primary-green;
+        background-color: $white-color;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+
+        @include media(large-desktop) {
+            max-width: 50%;
+        }
+
+        &--secondary {
+            flex-wrap: nowrap;
+            @include media(large-desktop) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &--secondary {
+        background-color: $background-color;
+        color: black;
+        &:hover {
+            background-color: $black-color;
+            color: white;
+        }
+    }
+
+    @include media(large-desktop) {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+.horizontal-line {
+    border: 1px solid black;
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile {
+    @include media(tablet) {
+        display: none;
+    }
+}
+
+.tablet {
+    display: none;
+    @include media(tablet) {
+        display: block;
+    }
+}
+
+.desktop {
+    display: none;
+    @include media(desktop) {
+        display: flex;
+    }
+}
+
+.large-desktop {
+    display: none;
+    @include media(desktop-l) {
+        display: block;
+    }
+}
+
+.animated-link {
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $black-color;
+        transition: width .3s;
+    }
+
+    &--orange::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $primary-orange;
+        transition: width .3s;
+    }
+    &--green::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $primary-green;
+        transition: width .3s;
+    }
+    &:hover::after {
+        width: 100%;
+        transition: width .3s;
+    }
+
+
+}

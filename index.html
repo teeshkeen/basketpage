@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xpage, offer me please</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./src/style.scss">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header animate">
+      <div class="header__inner">
+        <button class="mobile-menu__button menu-btn mobile">
+          <img src="./src/images/menu-mobile-button.svg" alt="Иконка кнопки открытия мобильного меню">
+        </button>
+        <div class="header__navigation">
+          <div class="logotype">
+            <img src="./src/images/logotype.svg" alt="Логотип IT–компании">
+          </div>
+          <div class="header__menu tablet">
+            <ul class="menu">
+              <li class="menu__item animated-link"><a href="">играть</a></li>
+              <li class="menu__item animated-link"><a href="">смотреть</a></li>
+              <li class="menu__item animated-link"><a href="">учиться</a></li>
+              <li class="menu__item animated-link"><a href="">мероприятия</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__navigation-user">
+          <button class="desktop-menu__button desktop">
+            <img class="desktop-menu__button-icon" src="./src/images/menu.svg" alt="Иконка кнопки открытия меню"></img>
+            <span class="desktop-menu__button-text menu-btn">МЕНЮ</span>
+          </button>
+          <button class="header__user">
+            <span class="header__user-name tablet">ГЕННАДИЙ П.</span>
+            <img class="header__user-avatar" src="./src/images/avatar.svg" alt="Аватар пользователя"></img>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="banner animate">
+        <div class="banner__inner">
+          <div class="banner__swiper swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./src/images/3-mobile.webp">
+                  <source media="(min-width: 768px)" srcset="./src/images/3.webp">
+                  <img src="./src/images/3.webp" alt="Картинка">
+                </picture>
+                <h1 class="swiper-slide__text">Найди с кем <br> поиграть в баскет</h1>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./src/images/2-mobile.webp">
+                  <source media="(min-width: 768px)" srcset="./src/images/2.webp">
+                  <img src="./src/images/2.webp" alt="Картинка">
+                </picture>
+                <h1 class="swiper-slide__text">Становись сильнее <br> с каждым днем</h1>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./src/images/1-mobile.webp">
+                  <source media="(min-width: 768px)" srcset="./src/images/1.webp">
+                  <img src="./src/images/1.webp" alt="Картинка">
+                </picture>
+                <h1 class="swiper-slide__text">Соцерзай <br> на своем пути</h1>
+              </div>
+            </div>
+            <div class="custom-pagination">
+              <button class="custom-pagination__button button" data-slide="0">
+                <span>ИГРАЙ</span>
+                <img class="arrow" src="./src/images/arrow.svg" alt="Иконка стрелочки">
+              </button>
+              <button class="custom-pagination__button button" data-slide="1">
+                <span>УЧИСЬ</span>
+                <img class="arrow" src="./src/images/arrow.svg" alt="Иконка стрелочки">
+              </button>
+              <button class="custom-pagination__button button" data-slide="2">
+                <span>СМОТРИ</span>
+                <img class="arrow" src="./src/images/arrow.svg" alt="Иконка стрелочки">
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="practice animate">
+        <div class="section-header animate">
+          <h2 class="section-header__title">ИГРАЙ</h2>
+          <a class="section-header__link section-header__link--orange" href="/">
+            <span class="animated-link animated-link--orange">В РАЗДЕЛ</span>
+            <img class="arrow tablet" src="./src/images/arrow--orange.svg" alt="Иконка стрелочки">
+          </a>
+        </div>
+        <div class="practice__inner">
+          <!-- cards -->
+          <ul class="cards-list">
+            <li class="cards-list__item">
+              <div class="cards-list__item__image-container">
+                <img class="cards-list__item__image" src="./src/images/card-one.jpeg" alt="Картинка">
+              </div>
+              <div class="cards-list__item__typography">
+                <h3 class="cards-list__item__title">
+                  Найди себе <br> команду
+                </h3>
+                <p class="cards-list__item__text">
+                  Игры на районе - это возможность найти с кем поиграть в баскетбол
+                  в выходные, или создать свою игру
+                  и пригласить других игроков присоединиться.
+                </p>
+                <button class="cards-list__item__btn button button-reversed">ПОДРОБНЕЕ <img src="./src/images/arrow.svg"
+                    alt="Иконка стрелочки"></button>
+
+              </div>
+            </li>
+
+            <li class="cards-list__item">
+              <div class="cards-list__item__image-container">
+                <img class="cards-list__item__image cards-list__item__image--ball" src="./src/images/fullball.png"
+                  alt="Картинка">
+              </div>
+              <div class="cards-list__item__typography">
+                <h3 class="cards-list__item__title">
+                  Создавай <br> команды
+                </h3>
+                <p class="cards-list__item__text">
+                  Создавайте команды с друзьями.
+                  Делитесь фотографиями, делайте опросы и участвуйте в турнирах. Будьте активными и получайте ачивки для
+                  вашей команды.
+                </p>
+                <button class="cards-list__item__btn button button-reversed">ПОДРОБНЕЕ <img src="./src/images/arrow.svg"
+                    alt="Иконка стрелочки"></button>
+
+              </div>
+            </li>
+
+            <li class="cards-list__item">
+              <img class="cards-list__item__image" src="./src/images/card-three.jpeg" alt="Картинка">
+              <div class="cards-list__item__typography">
+                <h3 class="cards-list__item__title">
+                  участвуй <br> в турнирах
+                </h3>
+                <p class="cards-list__item__text">
+                  Участвуйте в турнирах вместе
+                  с вашей командой. Будьте активными, побеждайте и получайте ачивки
+                  и призы от наших спонсоров.
+                </p>
+                <button class="cards-list__item__btn button button-reversed">ПОДРОБНЕЕ <img src="./src/images/arrow.svg"
+                    alt="Иконка стрелочки"></button>
+
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+      <section class="education animate">
+        <div class="education__inner">
+          <div class="section-header section-header--no-space animate">
+            <h2 class="section-header__title">Учись</h2>
+            <a class="section-header__link section-header__link--green" href="/">
+              <span class="animated-link animated-link--green">В РАЗДЕЛ</span>
+              <img class="arrow tablet" src="./src/images/arrow--green.svg" alt="Иконка стрелочки">
+            </a>
+          </div>
+          <div class="education__content">
+            <div class="education__cards">
+              <ul class="events-list">
+                <li class="events-list__item">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./src/images/3-mobile.webp">
+                    <source media="(min-width: 768px)" srcset="./src/images/3.webp">
+                    <img class="events-list__item__image" src="./src/images/3.webp" alt="Картинка">
+                  </picture>
+                  <div class="events-list__item__typography">
+                    <h3 class="events-list__item__title">
+                      мы собрали<br> секции
+                      для детей <br>
+                      по всему городу
+                    </h3>
+                    <a href="/" class="tag tag-active">12 секций по всему городу</a>
+                  </div>
+                </li>
+                <li class="events-list__item events-list__item-bottom">
+                  <div class="events-list__item__background"></div>
+                  <div class="events-list__item__typography">
+                    <h3 class="events-list__item__title">
+                      Подбери тренера <br>
+                      под свой уровень
+                    </h3>
+                    <ul class="tag-list">
+                      <li><a href="/" class="tag">детская тренировка</a></li>
+                      <li><a href="/" class="tag">для начинающих</a></li>
+                      <li><a href="/" class="tag">стритбол</a></li>
+                      <li><a href="/" class="tag">выезд тренера на дом</a></li>
+                      <li><a href="/" class="tag tag-active">12 фильтров</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="education__threads">
+              <ul class="threads-list">
+                <li class="threads-list__item">
+                  <h3 class="threads-list__item-title">
+                    <span>Видеоуроки</span> <img src="./src/images/arrow--green.svg" alt="Иконка стрелочки">
+                  </h3>
+                  <div class="threads-list__item-content">
+                    <div class="threads-list__item-media">
+                      <img class="threads-list__item-image" src="./src/images/thread-image.png" alt="Картинка статьи">
+                    </div>
+                    <div class="threads-list__item-typography">
+                      <strong>Евгений Воронов: «Бронзовые медали - оценка труда нашей команды»</strong>
+                      <div class="tag-list">
+                        <div class="tag tag--secondary">26 октября</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li class="threads-list__item">
+                  <h3 class="threads-list__item-title">
+                    <span>Статьи</span> <img src="./src/images/arrow--green.svg" alt="Иконка стрелочки">
+                  </h3>
+                  <div class="threads-list__item-content">
+                    <div class="threads-list__item-typography">
+                      <strong>Евгений Воронов: «Бронзовые медали - оценка труда нашей команды»</strong>
+                      <div class="tag tag--secondary">26 октября</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="threads-list__item">
+                  <h3 class="threads-list__item-title">
+                    <span>Термины</span> <img src="./src/images/arrow--green.svg" alt="Иконка стрелочки">
+                  </h3>
+                  <div class="threads-list__item-content">
+                    <div class="threads-list__item-typography">
+                      <div class="tag-list tag-list--secondary">
+                        <div class="tag tag--secondary">треха</div>
+                        <div class="tag tag--secondary">трехочковый</div>
+                        <div class="tag tag--secondary">36 терминов</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer animate">
+      <div class="footer__inner">
+        <hr class="horizontal-line">
+        <div class="footer__content">
+          <h1 class="footer__title">
+            Еще больше полезных материалов
+            и видеоуроков
+            в нашем приложении
+          </h1>
+          <ul class="footer__socials-list">
+            <li class="footer__socials-list__item">
+              <img class="footer__socials-list__item-icon" src="./src/images/app-store.svg" alt="Иконка App Store">
+              <div class="footer__socials-list__item-text">
+                <span>Download on the</span>
+                <strong>App Store</strong>
+              </div>
+            </li>
+            <li class="footer__socials-list__item">
+              <img class="footer__socials-list__item-icon" src="./src/images/google-play.svg" alt="Иконка Google Play">
+              <div class="footer__socials-list__item-text">
+                <span>Get it on</span>
+                <strong>Google Play</strong>
+              </div>
+            </li>
+          </ul>
+          <div class="copyright ">
+            <a href="https://xpage.ru/">сделано в xpage</a>
+          </div>
+        </div>
+        <img class="ball animate" src="./src/images/fullball.png" alt="Баскетбольный мяч">
+        <div class="qr dekstop">
+          <img class="qr__image" src="./src/images/qr.svg" alt="QR-код">
+          <div class="qr__typography">
+            <span class="qr__typography-platforms">iOS / Android</span>
+            <p class="qr__typography-text">Наведите камеру устройства на QR-код, чтобы скачать</p>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+  </div>
+  <div id="fullscreenMenu" class="fullscreen-menu">
+    <span id="closeMenuBtn" class="close">&times;</span>
+    <div class="menu-content">
+      <nav class="menu-items">
+        <ul>
+          <li><a class="animated-link" href="#">Играть</a></li>
+          <li><a class="animated-link" href="#">Смотреть</a></li>
+          <li><a class="animated-link" href="#">Учиться</a></li>
+          <li><a class="animated-link" href="#">Мероприятия</a></li>
+        </ul>
+      </nav>
+    </div>
+    <span class="menu-footer copyright"><a href="https://xpage.ru/">СДЕЛАНО В XPAGE</a></span>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./src/scripts/animate.js"></script>
+  <script src="./src/scripts/swiper.js"></script>
+  <script src="./src/scripts/menu.js"></script>
+</body>
+
+</html>

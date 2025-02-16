@@ -1,0 +1,47 @@
+@import '../mixins';
+@import '../variables';
+
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-link {
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $black-color;
+        transition: width .3s;
+    }
+
+    &--orange::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $primary-orange;
+        transition: width .3s;
+    }
+    &--green::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $primary-green;
+        transition: width .3s;
+    }
+    &:hover::after {
+        width: 100%;
+        transition: width .3s;
+    }
+
+
+}

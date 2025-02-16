@@ -1,0 +1,11 @@
+@import '../variables';
+@import '../mixins';
+
+.banner {
+    &__inner {
+        margin-top: 8px;
+
+        @include border-radius;
+        overflow: hidden;
+    }
+}

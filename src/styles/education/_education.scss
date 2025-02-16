@@ -1,0 +1,217 @@
+@import '../variables';
+@import '../mixins';
+.education {
+
+    &__inner {
+        @include section-spacer;
+        border-radius: 20px;
+        @include flex-between;
+        flex-direction: column;
+        gap: 16px;
+
+        @include media(desktop) {
+            background-color: $white-color;
+            padding: 16px;    
+        }
+
+        @include media(large-desktop) {
+            margin-top: 120px;
+            gap: 64px;
+        }
+    }
+
+    &__content {
+
+        @include media(desktop) {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+        }
+    }
+
+    &__threads {
+        display: none;
+        flex-basis: 30%;
+        border-left: 2px $background-color solid;
+        padding-left: 16px;
+        @include media(desktop) {
+            display: block;
+        }
+    }
+
+    &__cards {
+        @include media(desktop) {
+            flex-basis: 70%
+        }
+    }
+}
+
+.events-list {
+    @include flex-col;
+    gap: 8px;
+
+    &__item {
+        position: relative;
+        max-height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &__image {
+            position: relative;
+            width: 100%;
+            
+            @include media(desktop) {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__background {
+            position: relative;
+            width: 100%;
+            min-height: 400px;
+
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $primary-green;
+                }
+            }
+        
+
+        &__typography {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            @include flex-between;
+            flex-direction: column;
+            z-index: 2;
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            @include media(large-desktop) {
+                font-size: clamp(36px, 1vw + 25px, 48px);
+            }
+        }
+
+        @include media(tablet) {
+            flex-basis: 50%;
+        }
+
+        @include media(tablet) {
+            flex-direction: row;
+        }
+    
+        @include media(desktop) {
+            flex-direction: column;
+            max-height: 600px;
+            flex-basis: unset;
+        }
+    
+        &-bottom {
+            @include media(desktop) {
+                max-height: 200px;
+            }
+
+            @include media(large-desktop) {
+                max-height: 300px;
+            }
+        }
+
+        @include media(desktop) {
+            height: 400px
+        }
+    }
+    
+    @include media(large-desktop) {
+        gap: 20px;
+    }
+    
+}
+
+.threads-list {
+    @include flex-col;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    flex-basis: 40%;
+    gap: 10px;
+
+    &__item {
+        @include flex-between;
+        flex-direction: column;
+        height: 100%;
+        color: $black-color;
+        text-transform: uppercase;
+        &:not(:last-child) {
+            border-bottom: 1px $background-color solid;
+            padding-bottom: 10px;
+        }
+
+        &-content {
+            @include flex-between;
+            gap: 10px;
+        }
+
+        &-title {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            cursor: pointer;
+            font-size: 20px;
+            
+            img {
+                opacity: 0;
+            }
+            &:hover {
+            color: $primary-green;
+            }
+            &:hover img {
+                opacity: 1;
+            }
+            
+            
+        }
+
+        &-media {
+            display: flex;
+            width: 30vw;
+            height: 15vh;
+            overflow: hidden;
+            border-radius: 8px;
+            flex-basis: 40%;
+        }
+
+        &-image {
+            width: 100%;
+            object-fit: cover;
+            transform: scale(1.2);
+        }
+
+        &-typography {
+            @include flex-col;
+            justify-content: space-between;
+            gap: 10px;
+            flex-basis: 60%;
+
+            strong {
+                font-size: 12px;
+
+                @include media(large-desktop) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
